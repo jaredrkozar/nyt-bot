@@ -1,0 +1,95 @@
+/* some style */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bgcolor: rgb(0, 0, 0);
+        --textcolor: rgb(255, 255, 255);
+        --detailtextcolor: rgb(149, 149, 149);
+        --buttoncolor: rgb(82, 108, 255);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        --bgcolor: rgb(255, 255, 255);
+        --textcolor: rgb(0, 0, 0);
+        --detailtextcolor: rgb(149, 149, 149);
+        --buttoncolor: rgb(82, 108, 255);
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+
+h1 {
+    text-align: center;
+}
+
+#queryDetails {
+    position: absolute; 
+    top: 125px;
+    left: 40px;
+
+}
+
+input[type=button] {
+ 
+    color: var(--buttoncolor);
+ 
+    background-color: transparent;
+     
+    border: 2px solid  var(--buttoncolor); 
+     
+    border-radius: 5px;
+    font-size: 18px;
+    -o-transition:all .2s ease-in;
+    -webkit-transition:all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+input[type=button]:hover  {
+    background: var(--sectionhovercolor);
+    background-color: var(--buttoncolor);
+    color: white;
+}
+
+#articleDetails {
+    position: absolute;
+    top: 125px;
+    left: 500px;
+    width: 600px;
+}
+
+.articleAuthor, .articleSnippet, .articleLeadParagraph, .articleSnippet {
+    font-family: 'Lora', serif;
+    color: var(--detailtextcolor);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.articleTitle {
+    font-family: 'Lora', serif;
+    color: var(--textcolor);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.articleAuthor {
+    font-style: italic;
+    font-weight: 400;
+}
+#optionButtons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    align-items: left;
+    justify-content: left;
+}
